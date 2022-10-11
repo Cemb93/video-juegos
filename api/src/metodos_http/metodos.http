@@ -1,0 +1,26 @@
+GET http://localhost:3001/videogames
+Content-Type: application/json
+###
+GET http://localhost:3001/videogames?name=bkblb
+Content-Type: application/json
+###
+GET http://localhost:3001/videogames?page=0&order=ASC&filter=sex
+Content-Type: application/json
+###
+GET http://localhost:3001/videogames/5555
+Content-Type: application/json
+###
+POST http://localhost:3001/videogames
+Content-Type: application/json
+
+{
+  "name": "comentando plataforma VES",
+  "description": "comentando OTRA VES el POST",
+  "released": "2022-06-06",
+  "rating": 3.33,
+  "genres": ["Aventure", "Action"]
+}
+###
+DELETE  http://localhost:3001/videogames/8d113a31-1530-4877-b44b-224940e0ff66
+
+# b7998d5c-b9b4-462d-9661-20491972db6d
