@@ -6,6 +6,7 @@ import { store } from '../src/redux/store';
 import App from './App';
 import axios from 'axios';
 axios.defaults.baseURL = process.env.REACT_APP_API 
+// axios.defaults.baseURL = process.env.BACK_END_URL 
 
 ReactDOM.render(
   <React.StrictMode>

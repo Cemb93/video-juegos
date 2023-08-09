@@ -105,7 +105,7 @@ export default function Home() {
       {current_games ? (
         current_games?.map((el) => {
           return (
-            <div>
+            <div key={el.id} >
               <CardVideoGame
                 key={el.id}
                 id={el.id}
