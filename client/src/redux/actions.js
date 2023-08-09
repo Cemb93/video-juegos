@@ -12,7 +12,7 @@ export const ORDER_BY_RATING = "ORDER_BY_RATING";
 
 export const get_all_games = () => async (dispatch) => {
   try {
-    let res = await axios("http://localhost:3001/videogames");
+    let res = await axios(`/videogames`);
     return dispatch({
       type: GET_ALL_GAMES,
       payload: res.data,
@@ -24,7 +24,7 @@ export const get_all_games = () => async (dispatch) => {
 
 export const search_BY_name = (name) => async (dispatch) => {
   try {
-    let res = await axios(`http://localhost:3001/videogames?name=${name}`);
+    let res = await axios(`/videogames?name=${name}`);
     return dispatch({
       type: SEARCH_BY_NAME,
       payload: res.data,
@@ -37,7 +37,7 @@ export const search_BY_name = (name) => async (dispatch) => {
 export const get_detail = (id) => async (dispatch) => {
   //! OJO, del archivo "Details.jsx" se imprime las "prop" para visualizar como llega el ID
   try {
-    let res = await axios(`http://localhost:3001/videogames/${id}`);
+    let res = await axios(`/videogames/${id}`);
     return dispatch({
       type: GET_DETAIL,
       payload: res.data,
@@ -49,7 +49,7 @@ export const get_detail = (id) => async (dispatch) => {
 
 export const create_game = (post) => async (dispatch) => {
   try {
-    let res = await axios.post(`http://localhost:3001/videogames`, post);
+    let res = await axios.post(`/videogames`, post);
     return dispatch({
       type: CREATE_GAME,
       payload: res.data,
@@ -61,7 +61,7 @@ export const create_game = (post) => async (dispatch) => {
 
 export const get_genres = () => async (dispatch) => {
   try {
-    let res = await axios(`http://localhost:3001/genres`);
+    let res = await axios(`/genres`);
     return dispatch({
       type: GET_GENRES,
       payload: res.data,
