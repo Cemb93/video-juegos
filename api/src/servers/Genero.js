@@ -14,7 +14,7 @@ const generos_api = async (_req, res) => {
         id: genero.id,
         name: genero.name,
       };
-    }).sort((a, b) => a.id - b.id); //! Aca inicialmente da 19
+    })
 
     //* Aca me guardo la INFO de mi DB
     //! NOTA: Mientras se carga la DB inicialmente da CERO
