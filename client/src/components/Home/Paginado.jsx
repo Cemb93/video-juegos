@@ -14,7 +14,7 @@ export default function Paginado ({ videogamePerPage, all_games, paginado, }) {
         <ul>
           <NumberPages>
             {
-              pages_number?.map(number => {
+              pages_number.length >= 1 && pages_number.map(number => {
                 return (
                   <div key={number} >
                     <button onClick={() => paginado(number)} >

@@ -10,7 +10,7 @@ export default function CardVideoGame ({ id, name, image, genres, rating }) {
       <Link to={`/videogames/${id}`} >
         <img src={image} alt="img not found" width="500px" height="250px" />
       </Link>
-      <p><strong>Genero: </strong>{typeof id === 'number'? genres.join(', ') : genres?.map(el => el.name + ', ')}</p>
+      <p><strong>Genero: </strong>{typeof id === 'number'? genres.join(', ') : genres.length >= 1 && genres.map(el => el.name + ', ')}</p>
       <p><strong>Rating: </strong>{rating}</p>
       </CharactersContainer>
     </div>

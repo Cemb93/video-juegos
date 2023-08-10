@@ -35,7 +35,7 @@ export default function Filters({ handle_filter_created, handle_order_BY_name, h
           <option>Genres</option>
           <option value="All">All</option>
           {
-            all_genres?.map(genre => {
+            all_genres.length >= 1 && all_genres.map(genre => {
               return (
                 <option key={genre.name} value={genre.name}>{genre.name}</option>
               )

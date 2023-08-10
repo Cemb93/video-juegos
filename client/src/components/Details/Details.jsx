@@ -37,7 +37,7 @@ export default function Details(props) {
           <p>
             <strong>Generos: </strong>
             {
-              detail.genres?.map(genre => typeof genre === 'object'? genre.name + ', ' : genre + ', ')
+              detail.genres.length >= 1 && detail.genres.map(genre => typeof genre === 'object'? genre.name + ', ' : genre + ', ')
             }
           </p>
           <p>
@@ -50,7 +50,7 @@ export default function Details(props) {
           </p>
           <p>
             <strong>Plataformas: </strong>
-            {detail.platforms?.map(platform => platform + ', ')}
+            {detail.platforms.map(platform => platform + ', ')}
           </p>
         </div>
       ) : (
