@@ -230,7 +230,7 @@ export default function CreateVideoGame() {
           </label>
           <select onChange={(e) => handler_select_genres(e)}>
             <option>Elije mínimo un Genero</option>
-            {genres.map((genre) => (
+            {genres.length >= 1 && genres.map((genre) => (
               <option key={genre.id} value={genre.name}>
                 {genre.name}
               </option>

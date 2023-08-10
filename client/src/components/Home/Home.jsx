@@ -102,8 +102,8 @@ export default function Home() {
           paginado={paginado}
         />
       </div>
-      {current_games ? (
-        current_games?.map((el) => {
+      {current_games.length >= 1 ? (
+        current_games.map((el) => {
           return (
             <div key={el.id} >
               <CardVideoGame
