@@ -15,16 +15,16 @@ const GENRES = "genres"
 
 
 // router.get('/videogames', get_info_api); //* http://localhost:3001/videogames
-router.get(`/api/${GAMES}`, get_info_api); //* http://localhost:3001/${GAMES}
+router.get(`/${GAMES}`, get_info_api); //* http://localhost:3001/${GAMES}
 
-router.get(`/api/${GAMES}/:id`, get_BY_id); //* http://localhost:3001/${GAMES}/:id
+router.get(`/${GAMES}/:id`, get_BY_id); //* http://localhost:3001/${GAMES}/:id
 
-router.delete(`/api/${GAMES}/:id`, delete_game); //* http://localhost:3001/${GAMES}/:id
+router.delete(`/${GAMES}/:id`, delete_game); //* http://localhost:3001/${GAMES}/:id
 
-router.put(`/api/${GAMES}/:id`, update); //* http://localhost:3001/${GAMES}/:id
+router.put(`/${GAMES}/:id`, update); //* http://localhost:3001/${GAMES}/:id
 
-router.post(`/api/${GAMES}`, post_character); //* http://localhost:3001/GAMES
+router.post(`/${GAMES}`, post_character); //* http://localhost:3001/GAMES
 
-router.get(`/api/${GENRES}`, generos_api); //* http://localhost:3001/genres
+router.get(`/${GENRES}`, generos_api); //* http://localhost:3001/genres
 
 module.exports = router;
